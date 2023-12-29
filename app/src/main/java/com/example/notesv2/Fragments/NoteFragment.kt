@@ -382,7 +382,7 @@ class NoteFragment : Fragment() {
 
                                 override fun onShown(transientBottomBar: Snackbar?) {
 
-                                    transientBottomBar?.setAction("Отменить?") {
+                                    transientBottomBar?.setAction("Отменить") {
 
                                         FirebaseFirestore.getInstance().collection("notes").document(FirebaseAuth.getInstance().uid.toString())
                                             .collection("myNotes").document().set(note)
